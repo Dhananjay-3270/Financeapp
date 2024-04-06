@@ -4,11 +4,12 @@ import Vector from "./assets/Vector.png";
 import Igstudio from "./assets/Igstudio.png";
 import mail from "./assets/Message 35.png";
 import styles from "./Home.module.css";
+import pic from "./assets/pic.png";
 function Home() {
   return (
     <>
       <Box>
-        <Box height={890} width="100%">
+        <Box height={990} width="100%">
           <Box display="flex" flexDirection="row" justifyContent="space-evenly">
             <Box
               width={143}
@@ -56,6 +57,7 @@ function Home() {
               curabitur sodales conubia ut inceptos faucibus himenaeos tortor
               eget, hac massa gravida arcu interdum proin curae.
             </p>
+            <Box display='flex' flexDirection='row'>
             <Box
               sx={{
                 width: "438px",
@@ -65,13 +67,40 @@ function Home() {
                 opacity: "10%",
               }}
               display="flex"
-              justifyContent="center"
-              alignItems="center"
+              justifyContent="space-around"
+              flexDirection="row"
             >
-              <Box sx={{ width: "224px", height: "26px", background: "red" }}>
-                <img alt="mail" src={mail} />
-                Enter your email address
+              <Box
+                component="form"
+                sx={{
+                  "& > :not(style)": { m: 1, width: "40ch" },
+                }}
+                noValidate
+                autoComplete="off"
+              >
+                <TextField
+                  id="outlined-basic"
+                  label="Enter your eamil address"
+                  variant="outlined"
+                />
               </Box>
+              <Box
+                sx={{
+                  width: "137px",
+                  height: "74px",
+                  borderRadius: "43px",
+                  bgcolor: " #E3B748",
+                }}
+                display="flex"
+                alignContent="center"
+                justifyContent="center"
+              >
+                <h4> Lets Talk</h4>
+              </Box>
+            </Box>
+            <Box sx={{ width: "467.71px", height: "544.71px", position:'relative', left:"250px" , top:"-380px"}}>
+              <img alt="pic" src={pic} />
+            </Box>
             </Box>
           </Box>
         </Box>
